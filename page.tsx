@@ -434,7 +434,7 @@ export default function Home() {
                     </p>
                   ) : (
                     testHistory.map(result => (
-                      <div key={result.id} className="border rounded-lg p-3">
+                      <div key={result.id.toString()} className="border rounded-lg p-3">
                         <div className="flex justify-between items-start mb-2">
                           <div className="text-sm font-medium">
                             {new Date(result.timestamp).toLocaleString()}
@@ -561,4 +561,5 @@ export default function Home() {
       </div>
     </div>
   )
+
 }
